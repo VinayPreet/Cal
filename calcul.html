@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic calculator</title>
+        <style>
+            #calculator{
+                margin-top:150px;
+                margin-left:50px;
+                position:relative;
+                text-align:center;
+                border:2px solid black;
+                height:340px;
+                width:300px;
+                padding:20px;
+                background-color:#b3bffc;
+                
+            }
+            input{
+              font-size:30px;
+                margin:10px;
+                padding-right:10px;
+                padding-left:18px;
+            }
+            #ans{
+                width:250px;
+                border:2px solid black;
+                height:50px;
+            }
+            
+        </style>
+    </head>
+    <body>
+      <div id = "calculator">
+        <form name = cal>
+            <input type = text id = "ans" name = answer style = "text-align: right "><br><br>
+            
+            <input type = button name = btn1 value = 1 onclick = "num(btn1.value)">
+            <input type = button name = btn2 value = 2 onclick = "num(btn2.value)">
+            <input type = button name = btn3 value = 3 onclick = "num(btn3.value)">
+            <input type = button name = addbtn value = + onclick = "num(addbtn.value)"><br>
+            
+            <input type = button name = btn4 value = 4 onclick = "num(btn4.value)">
+            <input type = button name = btn5 value = 5 onclick = "num(btn5.value)">
+            <input type = button name = btn6 value = 6 onclick = "num(btn6.value)">
+            <input type = button name = subbtn value = - onclick = "num(subbtn.value)"><br>
+            
+            <input type = button name = btn7 value = 7 onclick = "num(btn7.value)">
+            <input type = button name = btn8 value = 8 onclick = "num(btn8.value)">
+            <input type = button name = btn9 value = 9 onclick = "num(btn9.value)">
+            <input type = button name = mulbtn value = * onclick = "num(mulbtn.value)"><br>
+            
+            <input type = button name = zerobtn value =  0 onclick = "num(zerobtn.value)">
+            <input type = button name = divbtn value =  ÷ onclick = "num(divbtn.value)">
+            <input type = button name = equalbtn value== onclick = "answer.value = eval(answer.value)">
+            <input type = button name = clearbtn value = "C" onclick = "reset(num(clearbtn.value))"><br>
+            
+        </form>
+      </div>
+        <script>
+            
+            function num(n){
+               cal.answer.value += n;
+            }
+            
+        </script>
+    </body>
+</html>
